@@ -1,0 +1,22 @@
+{
+  "name": "会議ねじこみパニック！",
+  "short_name": "会議パニック",
+  "description": "会議が積み上がる、会社員のための皮肉系カレンダーパズル",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#11182d",
+  "theme_color": "#141a31",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
