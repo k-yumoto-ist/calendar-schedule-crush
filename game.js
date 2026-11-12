@@ -84,12 +84,12 @@ function rotate(p){
 }
 function initialBoard(r){
  const board=blank();
- const limit=Math.min(ROWS-3, 3+Math.floor(r.fill/8));
+ const bottomRows=Math.min(ROWS-4,Math.max(2,Math.ceil(r.fill/(COLS-1))));
  let placed=0,attempts=0;
  while(placed<r.fill&&attempts++<500){
-  const y=random(Math.max(2,ROWS-1-limit),ROWS-1),x=random(0,COLS-1);
+  const y=random(ROWS-bottomRows,ROWS-1),x=random(0,COLS-1);
   if(board[y][x])continue;
-  if(board[y].filter(Boolean).length>=COLS-2)continue;
+  if(board[y].filter(Boolean).length>=COLS-1)continue;
   const def=pick(TYPES);
   board[y][x]={type:def.id,name:def.short,color:def.color};
   placed++;
